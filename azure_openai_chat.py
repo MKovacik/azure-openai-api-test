@@ -36,7 +36,7 @@ def setup_azure_openai_client():
     client = openai.AzureOpenAI(
         azure_endpoint=endpoint,
         api_key=api_key,
-        api_version="2023-12-01-preview"  # Using a recent API version
+        api_version="2024-12-01-preview"  # Using a recent API version
     )
     
     return client
@@ -87,9 +87,7 @@ def chat_with_model(client, model_name):
                 # Get response from the model
                 response = client.chat.completions.create(
                     model=model_name,
-                    messages=messages,
-                    max_tokens=800,
-                    temperature=0.7
+                    messages=messages
                 )
                 
                 elapsed_time = time.time() - start_time
