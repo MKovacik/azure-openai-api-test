@@ -1,6 +1,6 @@
 # Azure OpenAI API Test Project
 
-This project provides tools to test and interact with Azure OpenAI services. It includes a connection test script and a simple command-line chat application.
+This project provides tools to test and interact with Azure OpenAI services. It includes a connection test script and an enhanced command-line chat application with detailed model documentation.
 
 ## Configuration
 
@@ -49,19 +49,28 @@ This script will:
 
 ### Chat Application
 
-The chat application provides an interactive command-line interface to chat with Azure OpenAI models.
+The chat application provides an interactive command-line interface to chat with Azure OpenAI models and includes detailed documentation about model capabilities.
 
 ```
 python azure_openai_chat.py
 ```
 
 Options:
-- `--model` or `-m`: Specify a model to use (e.g., `--model o4-mini`)
-- `--list` or `-l`: List all available models and exit
+- `--model` or `-m`: Specify a model to use (e.g., `--model gpt-4.1`)
+- `--list` or `-l`: Display detailed documentation about available models including:
+  - Required API versions
+  - Max token parameters
+  - Output token limits
+  - Vision support
+  - And other model-specific configuration details
 
-Example:
+Examples:
 ```
-python azure_openai_chat.py --model o4-mini
+# Start a chat with the gpt-4.1 model
+python azure_openai_chat.py --model gpt-4.1
+
+# View detailed model documentation
+python azure_openai_chat.py --list
 ```
 
 To exit the chat, type `exit`, `quit`, or `q`.
