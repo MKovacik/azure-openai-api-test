@@ -56,7 +56,7 @@ python azure_openai_chat.py
 ```
 
 Options:
-- `--model` or `-m`: Specify a model to use (e.g., `--model gpt-4.1`)
+- `--model` or `-m`: Specify a model to use (e.g., `--model o4-mini`)
 - `--list` or `-l`: Display detailed documentation about available models including:
   - Required API versions
   - Max token parameters
@@ -66,8 +66,8 @@ Options:
 
 Examples:
 ```
-# Start a chat with the gpt-4.1 model
-python azure_openai_chat.py --model gpt-4.1
+# Start a chat with the o4-mini model
+python azure_openai_chat.py --model o4-mini
 
 # View detailed model documentation
 python azure_openai_chat.py --list
