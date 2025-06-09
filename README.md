@@ -7,8 +7,8 @@ This project provides tools to test and interact with Azure OpenAI services. It 
 The project uses environment variables for configuration. Create a `.env` file in the project root with the following variables:
 
 ```
-AZURE_OPENAI_ENDPOINT=https://temporarytesting.openai.azure.com/
-AZURE_OPENAI_API_KEY=your_api_key_here
+AZURE_OPENAI_ENDPOINT=your_azure_openai_endpoint_here
+AZURE_OPENAI_API_KEY=your_azure_openai_api_key_here
 ```
 
 ## Installation
