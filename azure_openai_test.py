@@ -38,7 +38,7 @@ def test_azure_openai_connection():
     try:
         print("\nAttempting to list available models...")
         models = client.models.list()
-        print("✅ Successfully connected to Azure OpenAI API")
+        print("Successfully connected to Azure OpenAI API")
         
         print("\nAvailable models:")
         expected_models = ["gpt-4.1", "gpt-4.1-nano", "o4-mini"]
@@ -51,12 +51,12 @@ def test_azure_openai_connection():
         # Check if expected models are available
         for model_name in expected_models:
             if model_name in found_models:
-                print(f"✅ Expected model '{model_name}' is available")
+                print(f"Expected model '{model_name}' is available")
             else:
-                print(f"❌ Expected model '{model_name}' was NOT found")
+                print(f"Expected model '{model_name}' was NOT found")
                 
     except Exception as e:
-        print(f"❌ Error listing models: {str(e)}")
+        print(f"Error listing models: {str(e)}")
         sys.exit(1)
     
     # Test a simple completion with one of the models
@@ -79,13 +79,13 @@ def test_azure_openai_connection():
             
             elapsed_time = time.time() - start_time
             
-            print(f"✅ Successfully received response in {elapsed_time:.2f} seconds")
+            print(f"Successfully received response in {elapsed_time:.2f} seconds")
             print(f"Response: {response.choices[0].message.content}")
         else:
-            print("⚠️ No expected models were found. Skipping completion test.")
+            print("No expected models were found. Skipping completion test.")
     
     except Exception as e:
-        print(f"❌ Error testing completion: {str(e)}")
+        print(f"Error testing completion: {str(e)}")
 
 if __name__ == "__main__":
     test_azure_openai_connection()
