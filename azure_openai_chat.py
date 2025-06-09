@@ -25,7 +25,7 @@ def setup_azure_openai_client():
     load_dotenv()
     
     # Configuration
-    endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://temporarytesting.openai.azure.com/")
+    endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
     api_key = os.getenv("AZURE_OPENAI_API_KEY")
     
     if not api_key:
