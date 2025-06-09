@@ -11,6 +11,13 @@ AZURE_OPENAI_ENDPOINT=your_azure_openai_endpoint_here
 AZURE_OPENAI_API_KEY=your_azure_openai_api_key_here
 ```
 
+**Note:** For convenience, an `.env_example` file is provided. You can rename it to `.env` and update it with your actual credentials:
+
+```
+cp .env_example .env
+# Then edit the .env file with your actual credentials
+```
+
 ## Installation
 
 1. Create and activate a virtual environment (recommended):
@@ -49,12 +56,12 @@ python azure_openai_chat.py
 ```
 
 Options:
-- `--model` or `-m`: Specify a model to use (e.g., `--model gpt-4.1`)
+- `--model` or `-m`: Specify a model to use (e.g., `--model o4-mini`)
 - `--list` or `-l`: List all available models and exit
 
 Example:
 ```
-python azure_openai_chat.py --model gpt-4.1
+python azure_openai_chat.py --model o4-mini
 ```
 
 To exit the chat, type `exit`, `quit`, or `q`.
@@ -62,8 +69,6 @@ To exit the chat, type `exit`, `quit`, or `q`.
 ## Available Models
 
 The project is configured to work with the following models:
-- gpt-4.1
-- gpt-4.1-nano
 - o4-mini
 
 However, it will work with any model available in your Azure OpenAI service.
